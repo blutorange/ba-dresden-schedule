@@ -188,7 +188,7 @@ class WrapperGoogleCalendar
     def updateEvent(evTo,evFrom)
         changed = WrapperGoogleCalendar.setCalEventData(evTo,evFrom)
         if changed
-            WrapperGoogleCalendar.saveEvent(evTo)
+            WrapperGoogleCalendar.saveEvent(@cal,evTo)
         else
             $stderr.puts "nothing to update"
         end
